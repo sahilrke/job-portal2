@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="studentmaster.master.cs" Inherits="Placement_Cell.Student_login.studentmaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title"  
+                
+                style="width: 958px; height: 211px; background-image: url('/placement_1.jpg');">
+
+          </div>
+            
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Student_login/studenthome.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Student_login/viewappl.aspx" Text="View Job"/>
+                        <asp:MenuItem NavigateUrl="~/Student_login/applyforjob.aspx" 
+                            Text="Apply For Job" Value="Apply For Job"></asp:MenuItem>
+                        <asp:MenuItem Text="View Companies" Value="New Student" 
+                            NavigateUrl="~/Student_login/viewcompny.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Message" Value="New Item"></asp:MenuItem>
+                        <asp:MenuItem Text="About Us" Value="New Item" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
